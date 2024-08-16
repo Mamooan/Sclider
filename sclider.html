@@ -1,0 +1,284 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://fontawesome.com/icons/twitter?f=brands&s=solid" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3f6155c803.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+      *{
+        padding: 0%;
+        margin: 0%;
+      }
+      .main{
+        height: 50vh;
+        width: 99.9%;
+        margin-top: 50px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .main1{
+        height: 8vh;
+        width: 25%;
+        border: 1px solid brown;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px auto;
+      }
+      .left,.right{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #c2d6ff;
+      }
+      .main2{
+        height: 100%;
+        width: 25%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .a{
+        height: 1px;
+        width: 30%;
+        border: 1px solid black;
+        background-color: black;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+      <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+       <source src="https://cdn.shopify.com/videos/c/vp/5301926f66df4e17b59c1e5c47dc78ff/5301926f66df4e17b59c1e5c47dc78ff.HD-1080p-4.8Mbps-16535535.mp4">
+      </video>
+
+      <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/3e5ad277d6034a8ea9d1bbc945a0c6a3/3e5ad277d6034a8ea9d1bbc945a0c6a3.HD-720p-1.6Mbps-18393662.mp4">
+       </video>
+
+       <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/14d4babb9a1a43728b4c5ff7dc1bf515/14d4babb9a1a43728b4c5ff7dc1bf515.HD-720p-1.6Mbps-18393820.mp4">
+       </video>
+
+       <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/bd74c541a79e42c9861f402f7d487fea/bd74c541a79e42c9861f402f7d487fea.HD-720p-1.6Mbps-18393770.mp4">
+       </video>
+
+       <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/232ed2770f5e463381dd94b654fd5763/232ed2770f5e463381dd94b654fd5763.HD-1080p-7.2Mbps-16534718.mp4">
+       </video>
+
+       <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/83698c3a532242549dff362883e9e4e9/83698c3a532242549dff362883e9e4e9.HD-1080p-2.5Mbps-16535426.mp4">
+       </video>
+
+       <video controls muted style="height: 290px;width: 150px;border-radius: 20px;">
+        <source src="https://cdn.shopify.com/videos/c/vp/3e5ad277d6034a8ea9d1bbc945a0c6a3/3e5ad277d6034a8ea9d1bbc945a0c6a3.HD-720p-1.6Mbps-18393662.mp4">
+       </video>
+    </div>
+    <div class="main1">
+      <button class="left">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <div class="main2">
+        <h3 id="change">1</h3>
+        <div class="a"></div>
+        <h3>7</h3>
+      </div>
+      <button class="right">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+   </div>
+
+   <script>
+      var left = document.querySelector(".left");
+      var right = document.querySelector(".right");
+      var sclider = document.querySelector(".main");
+      var change = document.querySelector("#change");
+      var vedio = Array.from(sclider.children);
+      var co=1
+      right.addEventListener("click", () => {
+         var lastVedio = vedio.pop();
+         vedio.unshift(lastVedio);
+         sclider.prepend(lastVedio);
+         if(co!==7) {
+          co++
+         }
+         else{
+          co=1
+         }
+         change.innerText=`${co}`
+         console.log(co);
+      });
+
+      left.addEventListener("click", () => {
+         var firstVedio = vedio.shift();
+         vedio.push(firstVedio);
+         sclider.append(firstVedio);
+         if (co>1) {
+          co--
+         }
+         else{
+          co=7
+         }
+         change.innerText=`${co}`
+      console.log(co,'here');
+      });
+      // console.log(co,'here');
+   </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: Arial, sans-serif;
+  }
+  
+  .scroll {
+      display: flex;
+      overflow-x: auto;
+      padding: 10px;
+  }
+  
+  .main {
+      display: flex;
+      scroll-snap-type: x mandatory;
+      /* overflow-x: auto; */
+      scrollbar-width: none; /* Remove scrollbar for Firefox */
+      -ms-overflow-style: none; /* Remove scrollbar for IE/Edge */
+  }
+  
+  .main::-webkit-scrollbar {
+      display: none; /* Remove scrollbar for Chrome, Safari, Opera */
+  }
+  
+  .small {
+      height: 300px;
+      width: 180px;
+      border-radius: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      box-shadow: 0px 0px 7px 1px black;
+  }
+  
+  .controls {
+      position: sticky;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+  }
+  
+  .scroll:hover .controls {
+      display: flex;
+  }
+  
+  .left, .right {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: white;
+      opacity: 0.6;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+  }
+  
+  .left {
+      margin-right: 10px;
+  }
+  
+  .right {
+      margin-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+      .main {
+          flex-wrap: nowrap;
+      }
+      .small {
+          height: 270px;
+          width: 150px;
+      }
+      .left, .right {
+          display: none;
+      }
+  }
+  </style>
+</head>
+<body>
+
+<div class="scroll">
+    <div class="controls">
+        <button class="left">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+    <div class="main">
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/a4117052ad9d4fc1af24c7bf4bf9370f.mp4">
+        </video>
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/a9f127cd4afe4555bcaaf3beb08599b1.mp4">
+        </video>
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/8122f44d54634dbdb2f94408f99dd952.mp4">
+        </video>
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/c9d8abd117be4c3b820e36593d575977.mp4">
+        </video>
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/7cf41a398e314dad8b4b96b68952b72f.mp4">
+        </video>
+        <video muted="" class="small" autoplay="" loop="" preload="auto">
+            <source src="https://cdn.shopify.com/videos/c/o/v/da688acbde354807861e403617c8c257.mp4">
+        </video>
+    </div>
+    <div class="controls">
+        <button class="right">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var left = document.querySelector(".left");
+        var right = document.querySelector(".right");
+        var slider = document.querySelector(".main");
+        var videos = Array.from(slider.querySelectorAll("video"));
+
+
+        right.addEventListener("click", function() {
+            var firstVideo = videos.pop();
+            videos.unshift(firstVideo);
+            slider.prepend(firstVideo);
+        })
+      })
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3f6155c803.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .scroll{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            height: 55vh;
+            width: 96%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            position: relative;
+        }
+
+        .left{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+            opacity: 0.6;
+            font-size: 20px;
+            position: absolute;
+            top: 37%;
+            left: 0.5%;
+        }
+        .right {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: white;
+            opacity: 0.6;
+            font-size: 20px;
+            position: absolute;
+            top: 37%;
+            right: 0.5%;
+        }
+
+        .a {
+            height: 1px;
+            width: 30%;
+            border: 1px solid black;
+            background-color: black;
+        }
+
+        .d {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            top: 2%;
+            left: 48.5%;
+            border: 5px solid black;
+            z-index: 5px;
+        }
+
+        @media (max-width:990px) {
+            .main {
+                height: 55vh;
+                overflow: hidden;
+            }
+
+            .small {
+                width: calc(100% / 3 - 20px);
+                height: 150px;
+            }
+        }
+
+        @media (max-width:771px) {
+            .main {
+                height: 55vh;
+            overflow-x: scroll;
+            gap: 35px;
+            }
+        }
+
+        @media (max-width:530px) {
+            .main {
+                justify-content: center;
+                gap: 40px;
+                overflow-x: auto;
+            }
+
+            .small {
+                width: 250px;
+            }
+        }
+
+        @media (max-width:330px) {
+            .main {
+                height: auto;
+                justify-content: center;
+                gap: 45px;
+                scrollbar-width: auto;
+                overflow-x: scroll;
+                overflow-y: hidden;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll">
+    <div class="main">
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/5301926f66df4e17b59c1e5c47dc78ff/5301926f66df4e17b59c1e5c47dc78ff.HD-1080p-4.8Mbps-16535535.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/3e5ad277d6034a8ea9d1bbc945a0c6a3/3e5ad277d6034a8ea9d1bbc945a0c6a3.HD-720p-1.6Mbps-18393662.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/14d4babb9a1a43728b4c5ff7dc1bf515/14d4babb9a1a43728b4c5ff7dc1bf515.HD-720p-1.6Mbps-18393820.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/bd74c541a79e42c9861f402f7d487fea/bd74c541a79e42c9861f402f7d487fea.HD-720p-1.6Mbps-18393770.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/232ed2770f5e463381dd94b654fd5763/232ed2770f5e463381dd94b654fd5763.HD-1080p-7.2Mbps-16534718.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/83698c3a532242549dff362883e9e4e9/83698c3a532242549dff362883e9e4e9.HD-1080p-2.5Mbps-16535426.mp4">
+        </video>
+
+        <video controls muted class="small"
+            style="height: 270px;width: 150px;border-radius: 30px;position: relative;z-index: 0px;">
+            <source
+                src="https://cdn.shopify.com/videos/c/vp/3e5ad277d6034a8ea9d1bbc945a0c6a3/3e5ad277d6034a8ea9d1bbc945a0c6a3.HD-720p-1.6Mbps-18393662.mp4">
+        </video>
+
+        <button class="left">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <button class="right">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</div>
+
+    <script>
+        var left = document.querySelector(".left");
+        var right = document.querySelector(".right");
+        var sclider = document.querySelector(".main");
+        var videos = Array.from(sclider.querySelectorAll("video"));
+
+        videos[3].style.transform = 'scale(1.15)';
+        videos[3].play();
+ 
+        right.addEventListener("click" , ()=>{
+    
+            videos[3].pause()
+            videos[3].style.transform = 'scale(1.0)';
+            var firstVedio = videos.pop()
+            videos.unshift(firstVedio)
+            sclider.prepend(firstVedio)
+            videos[3].style.transform = 'scale(1.15)';
+            videos[3].play();
+        })
+
+        left.addEventListener("click" , ()=>{
+            videos[3].pause()
+            videos[3].style.transform = 'scale(1.0)';
+            var lastVedio = videos.shift()
+            videos.push(lastVedio)
+            sclider.append(lastVedio)
+            videos[3].style.transform = 'scale(1.15)';
+            videos[3].play();
+        })
+
+
+
+    </script>
+</body>
+</html>
